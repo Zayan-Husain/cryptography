@@ -1,0 +1,14 @@
+.container
+  row
+    .input-field 
+      h2 input
+      textarea.browser-default 
+    .input-field.col.s12
+      select.browser-default
+        option(value="1") encrypt
+        option(value="1") dencrypt
+    .input-field 
+      h2 output
+      textarea.browser-default
+    .input-field 
+      a.btn send 

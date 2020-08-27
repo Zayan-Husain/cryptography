@@ -22,7 +22,7 @@ class mono_alphabetic_c  {
         for (var cipher in t.cfs) {
           if (ret !== "") {
             str = ret;
-            ret = ""
+            ret = "";
           }
           var cf = t.cfs[cipher]
           for (var i = 0; i < str.length; i++) {
@@ -52,22 +52,28 @@ class mono_alphabetic_c  {
 
         var cur_c;//current char
         var cur_l; //current letter of cipher
-        
-        for (var i = 0; i < str.length; i++) {
-          
-          for (var j = 0; j < t.abc.length; j++)//loop alphabet length
-          {
-            cur_l = t.cf[j].charAt(0)
-            cur_c = str.charAt(i);
+        for (var cipher = t.cfs.length - 1; cipher >= 0; cipher--) {
+          if (ret !== "") {//
+            str = ret;
+            ret = "";
+          }//
+          var cf = t.cfs[cipher]
+          for (var i = 0; i < str.length; i++) {//
             
-            if(cur_c.toUpperCase() === t.cf[j]){
-              //console.log(cur_c + " " + t.cf[j].charAt(0))
-              if (cur_c.isLowerCase()) ret += t.abc[j].toUpperCase();
-              else ret += t.abc[j].toLowerCase();
-              break;
-            }
-          }
-        }
+            for (var j = 0; j < t.abc.length; j++)//loop alphabet length
+            {
+              cur_l = cf[j].charAt(0)
+              cur_c = str.charAt(i);
+              
+              if(cur_c.toUpperCase() === cf[j]){
+                //console.log(cur_c + " " + cf[j].charAt(0))
+                if (cur_c.isLowerCase()) ret += t.abc[j].toUpperCase();
+                else ret += t.abc[j].toLowerCase();
+                break;
+              }// endif
+            }// endfor j
+          }// endfor i
+        }// endfor ciphers
         
         return ret
 	}//end ydecrypt

@@ -16,4 +16,4 @@ After that, click "Send".
 The decrypted version of your text should appear in the output box.
 Then, click "Copy," and that will copy your new text to your clipboard.
 
-Click ▶https://zayan-husain.github.io/cryptography/◀ to get to the encrypter/decrypter.
+Click ▶ https://zayan-husain.github.io/cryptography/ ◀ to get to the encrypter/decrypter.

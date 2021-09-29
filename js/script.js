@@ -11,10 +11,13 @@ $(document).ready(function(){
   $('.sidenav').sidenav();
               // A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ! @ # $ % ^ & * ( ) . ,
   var cipher1 = "T U V W X Y Z A B C D E F G H I J K L M N O P Q R S ! @ # $ % ^ & * ( ) . ,";
-  var cipher2 = "R S T U V W X Y Z A B C D E F G H I J K L M N O P Q ! @ # $ % ^ & * ( ) . ,"
+  var cipher2 = "R S T U V W X Y Z A B C D E F G H I J K L M N O P Q ! @ # $ % ^ & * ( ) . ,";
+  var cipher3 = "B C D E F G H I J K L M N O P Q R S T U V W X Y Z A ! @ # $ % ^ & * ( ) . ,"; //right shift 1
+  var cipher4 = "Z A B C D E F G H I J K L M N O P Q R S T U V W X Y ! @ # $ % ^ & * ( ) . ,"; //left shift 1
   test = new mono_alphabetic_c(
-    cipher1,
-    cipher2,
+    // cipher1,
+    // cipher2,
+    cipher3
   );
   $(".send").on("click", function() {
     var inp = $(".input")[0];
